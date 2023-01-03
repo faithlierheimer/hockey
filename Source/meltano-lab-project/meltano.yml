@@ -10,6 +10,7 @@ plugins:
   - name: tap-carbon-intensity
     variant: meltano
     pip_url: git+https://gitlab.com/meltano/tap-carbon-intensity.git
+<<<<<<< HEAD
   - name: tap-indeed
     variant: autoidm
     pip_url: git+https://github.com/AutoIDM/tap-indeed.git
@@ -28,6 +29,9 @@ plugins:
   - name: target-duckdb
     variant: jwills
     pip_url: target-duckdb~=0.4
+=======
+  loaders:
+>>>>>>> 51a7c3eaa6bccecfe51f54f95517d73fad510c6a
   - name: target-csv
     variant: hotgluexyz
     pip_url: git+https://github.com/hotgluexyz/target-csv.git
