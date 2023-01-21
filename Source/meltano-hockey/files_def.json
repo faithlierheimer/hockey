@@ -1,0 +1,40 @@
+{
+	"files":	[ 	
+					{	"entity" : "game",
+						"path" : "../../../data/game.csv",
+						"keys" : ["game_id"],
+						"delimiter": ","
+					},
+					{	"entity" : "game_goals",
+						"path" : "../../../data/game_goals.csv",
+						"keys" : ["play_id"],
+						"delimiter" : ","
+					},
+                    {	"entity" : "game_plays_players",
+						"path" : "../../../data/game_plays_players.csv",
+						"keys" : ["play_id"],
+						"delimiter" : ","
+					},
+                    {	"entity" : "game_skater_stats",
+						"path" : "../../../data/game_skater_stats.csv",
+						"keys" : ["game_id", "player_id"],
+						"delimiter" : ","
+					},
+                    {	"entity" : "game_team_stats",
+						"path" : "../../../data/game_teams_stats.csv",
+						"keys" : ["play_id"],
+						"delimiter" : ","
+					},
+                    {	"entity" : "player_info",
+						"path" : "../../../data/player_info.csv",
+						"keys" : ["player_id"],
+						"delimiter" : ","
+					},
+                    {	"entity" : "team_info",
+						"path" : "../../../data/team_info.csv",
+						"keys" : ["team_id"],
+						"delimiter" : ","
+					}
+
+				]
+}

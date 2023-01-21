@@ -1,0 +1,28 @@
+version: 1
+default_environment: dev
+project_id: 32b74c16-2357-45ef-944e-dd6cc14e4bea
+environments:
+- name: dev
+- name: staging
+- name: prod
+plugins:
+  extractors:
+  - name: tap-rest-api-msdk
+    variant: widen
+    pip_url: tap-rest-api-msdk
+  - name: tap-csv
+    variant: meltanolabs
+    pip_url: git+https://github.com/MeltanoLabs/tap-csv.git
+    config:
+      files:
+      - entity: game
+        path: /Users/flier/OneDrive/data/game.csv
+        keys: ['game_id', 'season', 'type', 'date_time', 'away_team_id', 'home_team_id', 'away_goals', 'home_goals', 'outcome', 'outcome', 'home_rink_side_start', 'venue', 'venue_link', 'venue_time_zone_id', 'venue_time_zone_offset', 'venue_time_zone_tz']
+  loaders:
+  - name: target-duckdb
+    variant: jwills
+    pip_url: target-duckdb~=0.4
+    config:
+      filepath: /Users/flier/OneDrive/duckdb/duckdb.exe
+      default_target_schema: default
+      add_metadata_columns: true
