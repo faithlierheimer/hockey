@@ -17,12 +17,12 @@ plugins:
       files:
       - entity: game
         path: /Users/flier/OneDrive/data/game.csv
-        keys: ['game_id', 'season', 'type', 'date_time', 'away_team_id', 'home_team_id', 'away_goals', 'home_goals', 'outcome', 'outcome', 'home_rink_side_start', 'venue', 'venue_link', 'venue_time_zone_id', 'venue_time_zone_offset', 'venue_time_zone_tz']
+        keys: ['game_id', 'season', 'type', 'date_time_GMT', 'away_team_id', 'home_team_id', 'away_goals', 'home_goals', 'outcome', 'home_rink_side_start', 'venue', 'venue_link', 'venue_time_zone_id', 'venue_time_zone_offset', 'venue_time_zone_tz']
   loaders:
   - name: target-duckdb
     variant: jwills
     pip_url: target-duckdb~=0.4
     config:
-      filepath: /Users/flier/OneDrive/duckdb/duckdb.exe
-      default_target_schema: default
+      filepath: /load/hockey.duckdb
+      default_target_schema: main
       add_metadata_columns: true
